@@ -1,0 +1,5 @@
+/* Geral */
+@import url("./geral/styles.css");
+
+/* Componentes */
+@import url("./components/styles.css");

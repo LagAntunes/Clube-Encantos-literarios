@@ -1,0 +1,92 @@
+.title-lg {
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.title-md {
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.title-sm {
+  font-size: 32px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.title-xs {
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 32px;
+  line-height: 200%;
+  font-weight: 500;
+}
+
+.body-lg-1,
+.body-lg-2 {
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.body-lg-2 {
+  font-weight: 400;
+}
+
+.body-md-1,
+.body-md-2 {
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.body-md-2 {
+  font-weight: 400;
+}
+
+.body-sm-1,
+.body-sm-2 {
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.body-sm-2 {
+  font-weight: 400;
+}
+
+.body-xs-1,
+.body-xs-2 {
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.body-xs-2 {
+  font-weight: 400;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.link {
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.tag {
+  font-size: 10px;
+  line-height: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+}
