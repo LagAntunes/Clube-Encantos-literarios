@@ -1,0 +1,127 @@
+@import url("../geral/variables.css");
+
+.highlight-text {
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  padding: 114px 32px 158px;
+  margin: 0 auto 80px;
+  position: relative;
+
+  & img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    position: absolute;
+
+    &:nth-child(1) {
+      rotate: 15deg;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: showImage1 1s ease-in;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+    &:nth-child(2) {
+      rotate: 90deg;
+      bottom: 72px;
+      left: 34px;
+      animation: showImage2 2s ease-in;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+    &:nth-child(3) {
+      rotate: -25deg;
+      bottom: 76px;
+      right: 2px;
+      animation: showImage3 3s ease-in;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+  }
+
+  & p {
+    color: var(--text-body);
+    text-align: center;
+
+    & span {
+      & b {
+        &:nth-child(1) {
+          animation: colorText1 1s linear forwards;
+          animation-timeline: view();
+          animation-range: entry 0% cover 30%;
+        }
+
+        &:nth-child(2) {
+          animation: colorText2 1s linear forwards;
+          animation-timeline: view();
+          animation-range: cover 20% cover 40%;
+        }
+
+        &:nth-child(3) {
+          animation: colorText3 1s linear forwards;
+          animation-timeline: view();
+          animation-range: cover 40% cover 60%;
+        }
+      }
+    }
+  }
+}
+
+/* Animação */
+@keyframes showImage1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showImage2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showImage3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes colorText1 {
+  from {
+    color: var(--text-body);
+  }
+  to {
+    color: var(--blue-light);
+  }
+}
+
+@keyframes colorText2 {
+  from {
+    color: var(--text-body);
+  }
+  to {
+    color: var(--blue-light);
+  }
+}
+
+@keyframes colorText3 {
+  from {
+    color: var(--text-body);
+  }
+  to {
+    color: var(--blue-light);
+  }
+}
