@@ -1,0 +1,192 @@
+@import url("../geral/variables.css");
+
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 222px;
+  width: 100%;
+  height: auto;
+  padding: 235px 0 478px;
+
+  & .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    & h3 {
+      color: var(--text-title);
+      position: relative;
+
+      &::before,
+      &::after {
+        content: url("../../assets/icons/purple-star-big.png");
+        position: absolute;
+        top: 50%;
+        left: -48px;
+        transform: translateY(-50%);
+        rotate: 8deg;
+      }
+
+      &::after {
+        left: unset;
+        right: -48px;
+      }
+    }
+
+    & p {
+      color: var(--text-body);
+    }
+  }
+
+  & .content {
+    width: 467px;
+    height: 617px;
+    margin: 0 auto;
+    position: relative;
+
+    & span {
+      color: var(--text-title);
+      position: absolute;
+      width: 100%;
+    }
+
+    & .arrow {
+      position: absolute;
+    }
+
+    & .pin-wrapper {
+      position: absolute;
+      animation: showPin 1s ease-in both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 30%;
+
+      & .pin {
+        z-index: 1;
+
+        & img {
+          width: 222px;
+          height: 254px;
+        }
+      }
+
+      & .arrow {
+        top: -90px;
+        left: -40px;
+      }
+
+      & span {
+        top: -136px;
+        left: -57px;
+      }
+    }
+
+    & .book-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      & .book {
+        & img {
+          width: 467px;
+          height: 617px;
+        }
+      }
+
+      & .arrow {
+        top: -25px;
+        left: -135px;
+        animation: showContentBook 1s ease-in both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 30%;
+      }
+
+      & span {
+        top: -72px;
+        left: -205px;
+        animation: showContentBook 1s ease-in both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 30%;
+      }
+    }
+
+    & .marker-wrapper {
+      width: 340px;
+      height: 815px;
+      position: absolute;
+      animation: showMarker 1s ease-in both;
+      animation-timeline: view();
+      animation-range: entry 40% cover 50%;
+
+      & .marker-1,
+      & .marker-2 {
+        position: absolute;
+
+        & img {
+          width: 172px;
+          height: 536px;
+        }
+      }
+
+      & .marker-1 {
+        top: 0;
+        left: -55px;
+        z-index: 1;
+        rotate: 8deg;
+      }
+
+      & .marker-2 {
+        top: 103px;
+        left: 40px;
+        rotate: 19deg;
+      }
+
+      & .arrow {
+        bottom: 44px;
+        left: 16px;
+      }
+
+      & span {
+        bottom: 0;
+        left: -65px;
+      }
+    }
+  }
+}
+
+/* Animações */
+@keyframes showPin {
+  from {
+    opacity: 0;
+    bottom: 0;
+    left: -65px;
+  }
+  to {
+    opacity: 1;
+    bottom: -100px;
+    left: -150px;
+  }
+}
+
+@keyframes showContentBook {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showMarker {
+  from {
+    opacity: 0;
+    bottom: -180px;
+    right: 0;
+  }
+  to {
+    opacity: 1;
+    bottom: -134px;
+    right: -340px;
+  }
+}
