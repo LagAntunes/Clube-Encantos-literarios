@@ -1,0 +1,121 @@
+@import url("../geral/variables.css");
+
+footer {
+  width: 100%;
+  height: 415px;
+  background-image: url("../../assets/images/footer-mask-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  & .content {
+    max-width: 1120px;
+    width: 100%;
+    height: auto;
+    padding-top: 170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & .social {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      & ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        padding-top: 22px;
+        border-top: 1px solid var(--shape-stroke);
+
+        & li {
+          width: 24px;
+          height: 24px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: linear-gradient(
+              to right,
+              var(--blue-base),
+              var(--pink-dark)
+            );
+            transition: all 0.3s ease-in-out;
+          }
+
+          & a {
+            position: relative;
+            z-index: 1;
+          }
+
+          &:hover {
+            &::before {
+              width: 44px;
+              height: 44px;
+            }
+          }
+        }
+      }
+    }
+
+    & .links {
+      display: flex;
+      flex-direction: row;
+      gap: 57px;
+
+      & .section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & span {
+          color: var(--text-body);
+        }
+
+        & ul {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          & li {
+            & a {
+              padding-bottom: 2px;
+              color: var(--blue-light);
+              position: relative;
+              transition: all 0.3s ease-in-out;
+
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: var(--pink-base);
+                transition: all 0.3s ease-in-out;
+              }
+
+              &:hover {
+                color: var(--pink-light);
+
+                &::before {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
