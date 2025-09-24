@@ -1,0 +1,223 @@
+@import url("../geral/variables.css");
+
+.highlight-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 138px;
+  max-width: 1050px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 302px;
+
+  & h3 {
+    color: var(--text-title);
+    text-align: center;
+  }
+
+  & .cards {
+    width: 288px;
+    height: 416px;
+    margin: 0 auto;
+    position: relative;
+
+    & .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 28px 32px;
+      border-radius: 24px;
+      border: 1px solid var(--shape-stroke);
+      background-color: var(--shape-base);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+
+      & .top {
+        display: flex;
+        flex-direction: column;
+
+        & .tags {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 21px;
+
+          & .title-xs {
+            color: var(--blue-light);
+          }
+        }
+
+        & p {
+          color: var(--text-title);
+          margin-bottom: 8px;
+        }
+
+        & span {
+          color: var(--text-label);
+        }
+      }
+
+      & .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        & ul {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          & li {
+            color: var(--text-body);
+            padding-left: 22px;
+            position: relative;
+
+            &::before {
+              content: url("../../assets/icons/blue-star-small.png");
+              position: absolute;
+              top: 50%;
+              left: -18px;
+              transform: translateY(-50%);
+              rotate: 8deg;
+            }
+          }
+        }
+
+        & .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 40px;
+          border-radius: 8px;
+          background-color: var(--blue-dark);
+          color: var(--text-title);
+        }
+      }
+
+      &.highlight {
+        background-color: var(--shape-hover);
+
+        & .top {
+          & .tags {
+            & .title-xs {
+              color: var(--pink-light);
+            }
+
+            & .tag {
+              padding: 10px 20px 8px;
+              border-radius: 24px;
+              background-color: var(--shape-stroke);
+              color: var(--text-body);
+            }
+          }
+        }
+
+        & .bottom {
+          & ul {
+            & li {
+              &::before {
+                content: url("../../assets/icons/purple-star-small.png");
+              }
+            }
+          }
+
+          & .button {
+            background-color: var(--pink-dark);
+          }
+        }
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      &:nth-child(1) {
+        animation: showCard1 1s ease-in both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 30%;
+
+        &::before {
+          content: url("../../assets/icons/purple-star-big.png");
+          position: absolute;
+          top: -26px;
+          left: -26px;
+        }
+
+        &::after {
+          content: url("../../assets/icons/purple-star-small.png");
+          position: absolute;
+          top: -10px;
+          left: -46px;
+        }
+      }
+
+      &:nth-child(2) {
+        z-index: 1;
+
+        &::before {
+          content: url("../../assets/icons/bunny.png");
+          position: absolute;
+          top: -52px;
+          left: 32px;
+        }
+      }
+
+      &:nth-child(3) {
+        animation: showCard2 1s ease-in both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 30%;
+        left: unset;
+
+        &::before {
+          content: url("../../assets/icons/purple-star-big.png");
+          position: absolute;
+          bottom: -26px;
+          right: -36px;
+        }
+
+        &::after {
+          content: url("../../assets/icons/purple-star-small.png");
+          position: absolute;
+          bottom: -45px;
+          right: -10px;
+        }
+      }
+    }
+  }
+}
+
+/* Animação */
+@keyframes showCard1 {
+  from {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    rotate: 0deg;
+  }
+  to {
+    opacity: 1;
+    top: 39px;
+    left: -300px;
+    rotate: -8deg;
+  }
+}
+
+@keyframes showCard2 {
+  from {
+    opacity: 0;
+    top: 0;
+    right: 0;
+    rotate: 0deg;
+  }
+  to {
+    opacity: 1;
+    top: 39px;
+    right: -300px;
+    rotate: 8deg;
+  }
+}
